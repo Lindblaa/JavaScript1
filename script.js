@@ -11,7 +11,6 @@ const RegBtn = document.querySelector('#RegBtn');
 let user = []
 
 
-
 const validateText = (id) => {
     let input = document.querySelector(id);
 
@@ -62,7 +61,6 @@ const validateEmail = (emailInput) => {
 }
 
 
-
 const listUsers = () => {
   output.innerHTML = '';
   email.classList.remove ('is-valid');
@@ -83,11 +81,7 @@ const listUsers = () => {
     `
   })
   console.log(user)
-
 }
-
-
-
 
 
 regForm.addEventListener('submit', e => {
@@ -171,8 +165,6 @@ regForm.addEventListener('submit', e => {
 })
 
 
-
-
 output.addEventListener('click', e => {
   
   let changeUser = user.find(u => u.id === e.target.parentNode.id);
@@ -192,13 +184,8 @@ output.addEventListener('click', e => {
     console.log(user)
   }
 
-  // if(e.target.type === 'button') 
   else {
     user = user.filter(newUser => newUser.id !== e.target.parentNode.id);
     listUsers();
   }
-
-
 })
-
-
